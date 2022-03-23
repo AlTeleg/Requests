@@ -23,7 +23,7 @@ class YaUploader:
         """Метод загружает файлы по списку file_list на яндекс диск"""
         file_list = os.listdir(file_path)
         for file in file_list:
-            href = self._get_upload_link(disk_file_path=disk_path+file).get("href", "")
+            href = self.get_upload_link(disk_file_path=disk_path+file).get("href", "")
             response = requests.put(href, data=open(file_path+file, 'rb'))
             if response.status_code == 201:
                 print("Success")
