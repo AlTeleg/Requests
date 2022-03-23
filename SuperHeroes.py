@@ -30,7 +30,7 @@ class SuperHero:
             if list(char_dict.values())[0] == value and list(char_dict.keys())[0] != key:
                 winner_list.append(key)
         print(f'\nТоп по характеристике <интеллект> - {",".join(winner_list)} ! ')
-        return list(char_dict.keys())[0]
+        return winner_list
 
 
 if __name__ == "__main__":
