@@ -26,7 +26,7 @@ def make_sorted_q_list(obj, tag):
     dt_now = int(datetime.datetime.now().timestamp())
     new_json = []
     for q in obj['items']:
-        if tag.lower() in q['tags'] and ((dt_now - q['creation_date']) <= 86400):
+        if tag.lower() in q['tags'] and ((dt_now - q['creation_date']) <= 172800):
             new_json.append(q)
     pprint(new_json)
     return new_json
